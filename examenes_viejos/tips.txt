@@ -1,0 +1,11 @@
+-- son medio inentendibles pero yo me entiendo
+
+
+para ver que este en todos puedo hacer count = select count (*) 
+o tambien con el patron "que no exista uno que no" osea anidando dos NOT EXISTS
+
+el distinto en sql se pone <>
+
+para el mas de algo tengo que hacer having COUNT/SUM >= ALL (SELECT lo mismo)
+
+para cambiar el formato de la fecha TO_CHAR(fecha, 'dd-mm-yyyy')

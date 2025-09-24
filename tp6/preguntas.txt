@@ -1,0 +1,9 @@
+ver bien lo de outer join, left outer join y eso (onda cuando se usa el on y eso)
+cual seria la diff de 
+FROM editorial JOIN LIBRO ON editorial.codEdit = libro.codEdit WHERE ...
+FROM editorial, libro WHERE editorial.codeEdit = libro.codEdit AND ...
+
+
+que es esto
+SET DATESTYLE TO ISO,DMY;
+
