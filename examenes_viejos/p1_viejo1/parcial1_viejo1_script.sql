@@ -205,4 +205,3 @@ AND ISBN NOT IN (
     FROM PRESTAMO
     WHERE CAST(fechaDevolucion as DATE) - cast(fechaPrestamo as DATE) >= 1
 );
-ra una línea de detalle factura, automáticamente se borra la factura correspondiente.
