@@ -169,8 +169,7 @@ Se utiliza una matriz especial llamada **tableau**. Si al finalizar el algoritmo
     - Eliminar de $F_1$ todas las dependencias que incluyan $A$.
     - Agregar las nuevas dependencias generadas.
 
----
-    // Iterar sobre dependencias en F1 cuyo lado derecho es A
+
 
 ## Recubrimiento Minimal de un Conjunto de Dependencias ($F_m$)
 
@@ -185,12 +184,6 @@ El **recubrimiento minimal** de $F$ es un conjunto equivalente de dependencias f
 2. Eliminar atributos redundantes del lado izquierdo.
 3. Eliminar dependencias redundantes.
 
----
-        
-        // Iterar sobre dependencias en F1 cuyo lado izquierdo contiene A
-        for (cada dependencia del tipo AZ → B ∈ F1) {
-            
-    for (cada dependencia f ∈ F1) {
 
 ## Formas Normales
 
@@ -226,62 +219,9 @@ Un esquema está en BCNF si:
 
 ¿El hecho de que dos valores coincidan en todas las filas implica necesariamente una dependencia funcional?  
 No. Podría ocurrir por casualidad en los datos actuales, pero una dependencia funcional es una restricción lógica sobre todos los posibles estados de la base, no solo sobre los datos presentes. Por eso, no se debe asumir una dependencia funcional solo porque se observa en los datos: debe ser garantizada por el diseño o las reglas del negocio.
-    
-    // Agregar las dependencias generadas (RES) a F1
-    F1 = F1 ∪ RES
-}
-```
+
 
 ## TIPS
 
 si quiero ver si se cumple $X \rightarrow Y$ basta con ver que $Y \in (X)^+$
-
-## Recubrimiento minimal de F
-
-$F_m$ es recubrimiento minimal de $F$ si:
-
-1. $F_m$ es equivalente a $F$
-2. A la derecha de toda dependencia funcional $df \in F_m$ hay un atributo simple
-3. Ninguna $df \in F_m$ tiene atributos redundantes a izquierda
-4. $F_m$ no tiene df redundantes
-
-## Forma normal
-
-### 1NF
-
-### 2NF
-
-si tengo un chabon no primo, que depende solo de una parte de la clave,
-entonces separo bro porque para que sea 2NF un chabon no primo tiene que depender de toda la clave. Osea no tiene que tener una *dependencia parcial*
-
-*(que sea primo significa que no esta en ninguna clave)
-
-### 3NF
-
-Un esquema de relacion R se encuentra en 3NF si se cumple que 
-
-$\forall A \rightarrow B$ A es superclave o B es primo
-
-para normalizar uin esquema que viola 3NF hay que 
-
-1. Hallar $F_m$
-2. Juntar dependencias que coinciden en el lado izq
-3. Para cada $X \rightarrow Y$ de $F_m$ (luego del paso 2) crear el esquema XY
-4. Eliminar todo esquema subconjunto de otro
-5. Si ninguno de los esquemas creados contiene una clave de R, agregar un esquema conteniendola
-
-### BCNF
-
-Un esquema de relacion R e encuentra en BCNF si se cumple que
-
-$\forall A \rightarrow B$ no trivial $ \in F^+$: A es superclave
-
-
-
-
-
-
-## Preguntas
-
-lo de que coincidan en todas hace que este la dependencia, eso no estaria mal asumirlo ya que podria venir una entrada a la tabla nueva con un insert que no cumpla esto? Es decir, no puede ser que coincidan de casualidad y no porque haya una dependencia funcional?
 
