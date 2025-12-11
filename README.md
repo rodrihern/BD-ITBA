@@ -6,4 +6,4 @@ Repo con:
 * Algunos ejercicios de algunas guias
 * tpe
 
-El resto de cosas que tengo estan en el drive estan en el drive
+El resto de cosas que tengo estan en el drive
